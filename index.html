@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25th july</title>
+    <link rel="stylesheet" href="index_style.css">
+</head>
+
+<body>
+    <div id="bg"></div>
+    <div class="container">
+        <div class="card">
+            <div class="card-content">
+                <h1>🎉 Countdown to Vedika birthday 🥳 🎂</h1>
+                <ul>
+                    <li><span id="days"></span>days</li>
+                    <li><span id="hours"></span>Hours</li>
+                    <li><span id="minutes"></span>Minutes</li>
+                    <li><span id="seconds"></span>Seconds</li>
+                </ul>
+                <a href="wish.html"><p>😊 Click over me! ✋ stop now now dude <br> 
+                    when it hits 00:00:00 on the timer 🥳</p></a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+    var card = $(".card");
+
+$(document).on("mousemove",function(e) {  
+  var ax = -($(window).innerWidth()/2- e.pageX)/20;
+  var ay = ($(window).innerHeight()/2- e.pageY)/10;
+  card.attr("style", "transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-webkit-transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-moz-transform: rotateY("+ax+"deg) rotateX("+ay+"deg)");
+});
+
+
+const second = 1000,
+      minute = second * 60,
+      hour = minute * 60,
+      day = hour * 24;
+
+let countDown = new Date('July 25, 2021 00:00:00').getTime(),
+    x = setInterval(function() {    
+
+      let now = new Date().getTime(),
+          distance = countDown - now;
+
+      document.getElementById('days').innerText = Math.floor(distance / (day)),
+        document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
+        document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+        document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
+
+      //do something later when date is reached
+      //if (distance < 0) {
+      //  clearInterval(x);
+      //  'IT'S MY BIRTHDAY!;
+      //}
+
+    }, second)
+    </script>
+</body>
+
+</html>
