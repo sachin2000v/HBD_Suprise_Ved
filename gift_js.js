@@ -82,8 +82,8 @@ function Firework( sx, sy, tx, ty ) {
 		this.coordinates.push( [ this.x, this.y ] );
 	}
 	this.angle = Math.atan2( ty - sy, tx - sx );
-	this.speed = 2;
-	this.acceleration = 1.05;
+	this.speed = 2.3;
+	this.acceleration = 1.3;
 	this.brightness = random( 50, 70 );
 	// circle target indicator radius
 	this.targetRadius = 1;
