@@ -304,9 +304,10 @@ function reveal() {
   }
   
   var ifrm = document.createElement("iframe");
-        ifrm.setAttribute("src","https://www.youtube.com/embed/W8We0tKTmQ0?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=http://youtubeembedcode.com");
+        ifrm.setAttribute("src","https://www.youtube.com/embed/v=8v-TWxPWIWc?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=http://youtubeembedcode.com");
         //ifrm.style.width = `${w}px`;
         //ifrm.style.height = `${h}px`;
         ifrm.style.border = 'none';
         document.querySelector('#video').appendChild(ifrm);
 }
+// https://www.youtube.com/embed/W8We0tKTmQ0?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=http://youtubeembedcode.com
